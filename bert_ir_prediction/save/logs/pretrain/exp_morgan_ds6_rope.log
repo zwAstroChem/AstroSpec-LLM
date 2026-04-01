@@ -1,0 +1,30 @@
+| Start time: 2025-05-25 22:44:18
+Loading vocab from: vocabs/vocab_morgan.pickle
+| Vocab size: 18630
+Loading dataset from: corpus/ZINC20/ZINC20_likePAHs_from_Selected_1M.csv
+| Train set size: 800000, Test set size: 200000
+Creating Dataloader...
+Building BERT_base model...
+Creating ZINC Trainer...
+2025-05-25 22:44:26,434 - INFO - Total Parameters: 71161542
+Training Start...
+2025-05-25 23:03:41,571 - INFO - train epoch_0: avg_loss=0.9455, avg_acc=82.7283
+| This epoch takes 1155.14 seconds
+2025-05-25 23:22:56,349 - INFO - train epoch_1: avg_loss=0.0977, avg_acc=97.3631
+| This epoch takes 1154.78 seconds
+2025-05-25 23:42:12,595 - INFO - train epoch_2: avg_loss=0.0543, avg_acc=98.5449
+| This epoch takes 1156.25 seconds
+2025-05-26 00:01:28,252 - INFO - train epoch_3: avg_loss=0.0383, avg_acc=98.9873
+| This epoch takes 1155.66 seconds
+2025-05-26 00:20:43,108 - INFO - train epoch_4: avg_loss=0.0284, avg_acc=99.2530
+| This epoch takes 1154.86 seconds
+2025-05-26 00:39:59,874 - INFO - train epoch_5: avg_loss=0.0217, avg_acc=99.4394
+| This epoch takes 1156.77 seconds
+2025-05-26 00:59:15,041 - INFO - train epoch_6: avg_loss=0.0167, avg_acc=99.5759
+| This epoch takes 1155.17 seconds
+2025-05-26 01:18:31,865 - INFO - train epoch_7: avg_loss=0.0131, avg_acc=99.6744
+2025-05-26 01:18:32,301 - INFO - After epoch_7, Model Saved to: saved/model/pretrain/morgan_based/BERT-base_20250526-011831_865.pth
+| This epoch takes 1157.26 seconds
+2025-05-26 01:20:11,109 - INFO - test epoch_0: avg_loss=0.0096, avg_acc=99.7785
+| Training time: 9344.675283670425
+

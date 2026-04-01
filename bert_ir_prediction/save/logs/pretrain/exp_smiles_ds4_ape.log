@@ -1,0 +1,54 @@
+| Start time: 2025-05-26 10:51:01
+Loading vocab from: vocabs/vocab_can.pickle
+| Vocab size: 80
+Loading dataset from: corpus/ZINC20/ZINC20_likePAHs_from_Raw_1M.csv
+| Train set size: 800000, Test set size: 200000
+Creating Dataloader...
+Building BERT_base model...
+Creating ZINC Trainer...
+2025-05-26 10:51:09,111 - INFO - Total Parameters: 42650192
+Training Start...
+2025-05-26 11:05:59,344 - INFO - train epoch_0: avg_loss=0.9166, avg_acc=72.7604
+| This epoch takes 890.23 seconds
+2025-05-26 11:20:47,788 - INFO - train epoch_1: avg_loss=0.2327, avg_acc=92.1140
+| This epoch takes 888.44 seconds
+2025-05-26 11:35:37,107 - INFO - train epoch_2: avg_loss=0.1592, avg_acc=94.3817
+| This epoch takes 889.32 seconds
+2025-05-26 11:50:27,521 - INFO - train epoch_3: avg_loss=0.1283, avg_acc=95.3612
+| This epoch takes 890.41 seconds
+2025-05-26 12:05:18,994 - INFO - train epoch_4: avg_loss=0.1123, avg_acc=95.8539
+| This epoch takes 891.47 seconds
+2025-05-26 12:20:07,905 - INFO - train epoch_5: avg_loss=0.1020, avg_acc=96.1927
+| This epoch takes 888.91 seconds
+2025-05-26 12:34:58,867 - INFO - train epoch_6: avg_loss=0.0939, avg_acc=96.4363
+| This epoch takes 890.96 seconds
+2025-05-26 12:49:50,159 - INFO - train epoch_7: avg_loss=0.0880, avg_acc=96.6314
+| This epoch takes 891.29 seconds
+2025-05-26 13:04:40,387 - INFO - train epoch_8: avg_loss=0.0830, avg_acc=96.7919
+| This epoch takes 890.23 seconds
+2025-05-26 13:19:30,540 - INFO - train epoch_9: avg_loss=0.0787, avg_acc=96.9198
+| This epoch takes 890.15 seconds
+2025-05-26 13:34:21,674 - INFO - train epoch_10: avg_loss=0.0752, avg_acc=97.0415
+| This epoch takes 891.13 seconds
+2025-05-26 13:49:11,030 - INFO - train epoch_11: avg_loss=0.0715, avg_acc=97.1515
+| This epoch takes 889.36 seconds
+2025-05-26 14:04:00,981 - INFO - train epoch_12: avg_loss=0.0686, avg_acc=97.2479
+| This epoch takes 889.95 seconds
+2025-05-26 14:18:52,974 - INFO - train epoch_13: avg_loss=0.0660, avg_acc=97.3277
+| This epoch takes 891.99 seconds
+2025-05-26 14:33:43,602 - INFO - train epoch_14: avg_loss=0.0632, avg_acc=97.4180
+| This epoch takes 890.63 seconds
+2025-05-26 14:48:34,411 - INFO - train epoch_15: avg_loss=0.0611, avg_acc=97.4888
+| This epoch takes 890.81 seconds
+2025-05-26 15:03:25,656 - INFO - train epoch_16: avg_loss=0.0588, avg_acc=97.5525
+| This epoch takes 891.25 seconds
+2025-05-26 15:18:16,448 - INFO - train epoch_17: avg_loss=0.0574, avg_acc=97.6055
+| This epoch takes 890.79 seconds
+2025-05-26 15:33:07,431 - INFO - train epoch_18: avg_loss=0.0554, avg_acc=97.6651
+| This epoch takes 890.98 seconds
+2025-05-26 15:47:59,123 - INFO - train epoch_19: avg_loss=0.0543, avg_acc=97.7050
+2025-05-26 15:47:59,407 - INFO - After epoch_19, Model Saved to: saved/model/pretrain/can_based/BERT-base_20250526-154759_123.pth
+| This epoch takes 891.98 seconds
+2025-05-26 15:49:15,918 - INFO - test epoch_0: avg_loss=0.0497, avg_acc=97.8466
+| Training time: 17886.807250499725
+

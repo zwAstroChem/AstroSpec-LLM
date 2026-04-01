@@ -1,0 +1,74 @@
+| Start time: 2025-05-25 02:48:34
+Loading vocab from: vocabs/vocab_morgan.pickle
+| Vocab size: 18630
+Loading dataset from: corpus/Wang/Wang_likePAHs_from_Raw_118770.csv
+| Train set size: 95016, Test set size: 23754
+Creating Dataloader...
+Building BERT_base model...
+Creating ZINC Trainer...
+2025-05-25 02:48:37,835 - INFO - Total Parameters: 71161542
+Training Start...
+2025-05-25 02:50:41,937 - INFO - train epoch_0: avg_loss=3.7859, avg_acc=38.9987
+| This epoch takes 124.10 seconds
+2025-05-25 02:52:45,707 - INFO - train epoch_1: avg_loss=1.4025, avg_acc=68.4420
+| This epoch takes 123.77 seconds
+2025-05-25 02:54:49,701 - INFO - train epoch_2: avg_loss=0.7302, avg_acc=81.1421
+| This epoch takes 123.99 seconds
+2025-05-25 02:56:53,513 - INFO - train epoch_3: avg_loss=0.4662, avg_acc=87.2771
+| This epoch takes 123.81 seconds
+2025-05-25 02:58:57,313 - INFO - train epoch_4: avg_loss=0.3269, avg_acc=90.8020
+| This epoch takes 123.80 seconds
+2025-05-25 03:01:01,177 - INFO - train epoch_5: avg_loss=0.2508, avg_acc=92.8732
+| This epoch takes 123.86 seconds
+2025-05-25 03:03:05,253 - INFO - train epoch_6: avg_loss=0.2059, avg_acc=94.1091
+| This epoch takes 124.08 seconds
+2025-05-25 03:05:09,214 - INFO - train epoch_7: avg_loss=0.1730, avg_acc=95.0122
+| This epoch takes 123.96 seconds
+2025-05-25 03:07:13,885 - INFO - train epoch_8: avg_loss=0.1485, avg_acc=95.6605
+| This epoch takes 124.67 seconds
+2025-05-25 03:09:18,312 - INFO - train epoch_9: avg_loss=0.1308, avg_acc=96.1907
+| This epoch takes 124.43 seconds
+2025-05-25 03:11:22,657 - INFO - train epoch_10: avg_loss=0.1164, avg_acc=96.6066
+| This epoch takes 124.34 seconds
+2025-05-25 03:13:27,163 - INFO - train epoch_11: avg_loss=0.1028, avg_acc=96.9816
+| This epoch takes 124.51 seconds
+2025-05-25 03:15:31,884 - INFO - train epoch_12: avg_loss=0.0925, avg_acc=97.2820
+| This epoch takes 124.72 seconds
+2025-05-25 03:17:36,334 - INFO - train epoch_13: avg_loss=0.0850, avg_acc=97.5010
+| This epoch takes 124.45 seconds
+2025-05-25 03:19:40,809 - INFO - train epoch_14: avg_loss=0.0768, avg_acc=97.7321
+| This epoch takes 124.48 seconds
+2025-05-25 03:21:45,416 - INFO - train epoch_15: avg_loss=0.0704, avg_acc=97.9182
+| This epoch takes 124.61 seconds
+2025-05-25 03:23:49,666 - INFO - train epoch_16: avg_loss=0.0642, avg_acc=98.1145
+| This epoch takes 124.25 seconds
+2025-05-25 03:25:53,963 - INFO - train epoch_17: avg_loss=0.0602, avg_acc=98.2352
+| This epoch takes 124.30 seconds
+2025-05-25 03:27:58,413 - INFO - train epoch_18: avg_loss=0.0551, avg_acc=98.3851
+| This epoch takes 124.45 seconds
+2025-05-25 03:30:03,158 - INFO - train epoch_19: avg_loss=0.0494, avg_acc=98.5576
+| This epoch takes 124.75 seconds
+2025-05-25 03:32:07,595 - INFO - train epoch_20: avg_loss=0.0477, avg_acc=98.6123
+| This epoch takes 124.44 seconds
+2025-05-25 03:34:12,207 - INFO - train epoch_21: avg_loss=0.0434, avg_acc=98.7428
+| This epoch takes 124.61 seconds
+2025-05-25 03:36:16,702 - INFO - train epoch_22: avg_loss=0.0397, avg_acc=98.8603
+| This epoch takes 124.50 seconds
+2025-05-25 03:38:21,291 - INFO - train epoch_23: avg_loss=0.0369, avg_acc=98.9184
+| This epoch takes 124.59 seconds
+2025-05-25 03:40:25,816 - INFO - train epoch_24: avg_loss=0.0345, avg_acc=98.9991
+| This epoch takes 124.53 seconds
+2025-05-25 03:42:30,066 - INFO - train epoch_25: avg_loss=0.0322, avg_acc=99.0847
+| This epoch takes 124.25 seconds
+2025-05-25 03:44:34,307 - INFO - train epoch_26: avg_loss=0.0296, avg_acc=99.1688
+| This epoch takes 124.24 seconds
+2025-05-25 03:46:38,957 - INFO - train epoch_27: avg_loss=0.0279, avg_acc=99.2407
+| This epoch takes 124.65 seconds
+2025-05-25 03:48:43,389 - INFO - train epoch_28: avg_loss=0.0257, avg_acc=99.2980
+| This epoch takes 124.43 seconds
+2025-05-25 03:50:47,983 - INFO - train epoch_29: avg_loss=0.0253, avg_acc=99.2983
+2025-05-25 03:50:48,391 - INFO - After epoch_29, Model Saved to: saved/model/pretrain/morgan_based/BERT-base_20250525-035047_983.pth
+| This epoch takes 125.00 seconds
+2025-05-25 03:50:59,098 - INFO - test epoch_0: avg_loss=0.0203, avg_acc=99.4996
+| Training time: 3741.262601852417
+

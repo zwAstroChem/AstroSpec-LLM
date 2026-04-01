@@ -1,0 +1,115 @@
+| Start time: 2025-12-14 22:13:46
+Loading vocab from: vocabs/vocab_can.pickle
+| Vocab size: 80
+Loading dataset from: corpus/PAHdb/PAHdb_W24146_Neutral.csv
+| Train set size: 12611, Valid set size: 1576, Test set size: 1577
+The test set has been saved to: corpus/PAHdb/PAHdb_W24146_Neutral_test.csv
+Creating Dataloader...
+Building BERT_base model...
+Creating PAHs Trainer...
+2025-12-14 22:13:50,735 - INFO - Total Parameters: 42924393
+Training Start...
+2025-12-14 22:13:51,240 - INFO - Model loaded from saved/models/pretrain/with_can/BERT-base_20250528-015713_486.pth
+| Epoch 0 takes 82.35 seconds
+| Epoch 1 takes 82.74 seconds
+| Epoch 2 takes 83.06 seconds
+| Epoch 3 takes 83.43 seconds
+| Epoch 4 takes 82.43 seconds
+| Epoch 5 takes 82.74 seconds
+| Epoch 6 takes 82.16 seconds
+| Epoch 7 takes 82.01 seconds
+| Epoch 8 takes 83.00 seconds
+| Epoch 9 takes 82.13 seconds
+| Epoch 10 takes 82.97 seconds
+| Epoch 11 takes 83.03 seconds
+| Epoch 12 takes 82.68 seconds
+| Epoch 13 takes 82.10 seconds
+| Epoch 14 takes 82.15 seconds
+| Epoch 15 takes 81.88 seconds
+| Epoch 16 takes 82.38 seconds
+| Epoch 17 takes 82.24 seconds
+| Epoch 18 takes 81.79 seconds
+| Epoch 19 takes 81.65 seconds
+| Epoch 20 takes 82.32 seconds
+| Epoch 21 takes 82.33 seconds
+| Epoch 22 takes 82.58 seconds
+| Epoch 23 takes 82.38 seconds
+| Epoch 24 takes 82.30 seconds
+| Epoch 25 takes 81.51 seconds
+| Epoch 26 takes 82.28 seconds
+| Epoch 27 takes 81.74 seconds
+| Epoch 28 takes 82.01 seconds
+| Epoch 29 takes 82.36 seconds
+| Epoch 30 takes 82.37 seconds
+| Epoch 31 takes 82.08 seconds
+| Epoch 32 takes 82.38 seconds
+| Epoch 33 takes 82.60 seconds
+| Epoch 34 takes 82.15 seconds
+| Epoch 35 takes 82.06 seconds
+| Epoch 36 takes 82.18 seconds
+| Epoch 37 takes 82.08 seconds
+| Epoch 38 takes 82.83 seconds
+| Epoch 39 takes 82.55 seconds
+| Epoch 40 takes 82.30 seconds
+| Epoch 41 takes 82.64 seconds
+| Epoch 42 takes 81.97 seconds
+| Epoch 43 takes 82.65 seconds
+| Epoch 44 takes 81.80 seconds
+| Epoch 45 takes 81.94 seconds
+| Epoch 46 takes 81.76 seconds
+| Epoch 47 takes 82.55 seconds
+| Epoch 48 takes 82.37 seconds
+| Epoch 49 takes 82.54 seconds
+| Epoch 50 takes 81.77 seconds
+| Epoch 51 takes 82.56 seconds
+| Epoch 52 takes 82.70 seconds
+| Epoch 53 takes 82.44 seconds
+| Epoch 54 takes 81.89 seconds
+| Epoch 55 takes 82.07 seconds
+| Epoch 56 takes 82.45 seconds
+| Epoch 57 takes 81.98 seconds
+| Epoch 58 takes 81.91 seconds
+| Epoch 59 takes 81.34 seconds
+| Epoch 60 takes 82.04 seconds
+| Epoch 61 takes 82.04 seconds
+| Epoch 62 takes 82.01 seconds
+| Epoch 63 takes 82.27 seconds
+| Epoch 64 takes 82.58 seconds
+| Epoch 65 takes 82.05 seconds
+| Epoch 66 takes 82.05 seconds
+| Epoch 67 takes 81.96 seconds
+| Epoch 68 takes 82.28 seconds
+| Epoch 69 takes 82.38 seconds
+| Epoch 70 takes 82.52 seconds
+| Epoch 71 takes 81.99 seconds
+| Epoch 72 takes 82.79 seconds
+| Epoch 73 takes 82.39 seconds
+| Epoch 74 takes 82.09 seconds
+| Epoch 75 takes 82.09 seconds
+| Epoch 76 takes 82.93 seconds
+| Epoch 77 takes 82.27 seconds
+| Epoch 78 takes 82.04 seconds
+| Epoch 79 takes 82.57 seconds
+| Epoch 80 takes 82.38 seconds
+| Epoch 81 takes 82.18 seconds
+| Epoch 82 takes 82.11 seconds
+| Epoch 83 takes 81.69 seconds
+| Epoch 84 takes 82.14 seconds
+| Epoch 85 takes 82.31 seconds
+| Epoch 86 takes 82.54 seconds
+| Epoch 87 takes 81.98 seconds
+| Epoch 88 takes 82.59 seconds
+| Epoch 89 takes 83.32 seconds
+| Epoch 90 takes 81.76 seconds
+| Epoch 91 takes 82.17 seconds
+| Epoch 92 takes 82.71 seconds
+| Epoch 93 takes 82.77 seconds
+| Epoch 94 takes 81.48 seconds
+| Epoch 95 takes 82.20 seconds
+| Epoch 96 takes 81.81 seconds
+| Epoch 97 takes 81.34 seconds
+| Early stopping at epoch 97
+2025-12-15 00:28:25,899 - INFO - Model loaded from saved/models/finetune/can_neutral/BERT4IR_ft_can_neutral_low_noRoPE_best.pth
+| Best epoch: 67, EMD Loss: 1.9726796661212465, SIS Loss: 0.4087214802516437, MSE Loss: 0.029896597262795546
+| Training time: 8078.179016590118
+
