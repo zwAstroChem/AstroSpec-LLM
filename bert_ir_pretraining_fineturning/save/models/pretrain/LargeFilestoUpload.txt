@@ -1,1 +1,6 @@
-Large files
+download the large data files on https://github.com/zwAstroChem/AstroSpec-LLM/releases/tag/V1.0.0
+and place:
+Model Parameters for Fine-tuning
+File: bert_exp_smiles_ds6_rope.pth
+Destination: ./bert_ir_pretraining_fineturning/save/models/pretrain/
+Purpose: Pre-trained weights required to begin the fine-tuning process.
