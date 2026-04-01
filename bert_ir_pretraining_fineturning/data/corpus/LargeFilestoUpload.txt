@@ -1,1 +1,7 @@
-Large files
+download the large data files on https://github.com/zwAstroChem/AstroSpec-LLM/releases/tag/V1.0.0
+and place:
+Model Parameters for Prediction
+Data for Pre-training
+File: ZINC20_likePAHs_from_Selected_1M.csv
+Destination: ./bert_ir_pretraining_fineturning/data/corpus/
+Purpose: ZINC20 dataset used for the model's pre-training phase.
