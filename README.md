@@ -13,6 +13,7 @@ This guide provides instructions for the AstroSpec-LLM framework, a deep-learnin
 AstroSpec-LLM is a transformer-based framework optimized for the James Webb Space Telescope (JWST) era. It utilizes self-supervised pre-training to master universal molecular features, which are subsequently fine-tuned to predict interstellar PAH spectra. This approach achieves high precision while bypassing the "quartic scaling" bottleneck and extreme computational costs of traditional quantum chemical calculations (e.g., DFT).
 
 =======================================================
+
 2. Workflow
 
 The AstroSpec-LLM pipeline operates in three distinct phases:
@@ -24,6 +25,7 @@ The AstroSpec-LLM pipeline operates in three distinct phases:
 (3) Inference/Prediction: The finalized model performs end-to-end spectral inference. It generates full IR spectra for novel PAH molecules based solely on their textual SMILES representation and charge state.
 
 =======================================================
+
 3. Code structure
 
 The project is organized into two primary modules based on the workflow stage:
@@ -39,11 +41,13 @@ Contains the standalone inference scripts (e.g., predict_by_csv.py) and pre-trai
 Please see the README files in each folder for detailed Usage Guide.
 
 =======================================================
+
 4. Important: Model Weights
 
 Note: Due to their large size, the model weight files (.pth) in both modules are provided in a compressed ZIP format. You must unzip these files into their respective save/models/ directories before attempting to run fine-tuning or prediction scripts.
 
 =======================================================
+
 5. License
 
 MIT License
