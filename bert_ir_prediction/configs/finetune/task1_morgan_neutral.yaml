@@ -1,0 +1,43 @@
+# ===============================================================
+# 1. Global environment
+# ===============================================================
+base_settings: &defaults
+  model: { n_layer: 6, n_head: 12, hid_dim: 768, seq_len: 384, dropout: 0.1 }
+  optimizer: { lr: 0.00005 }
+  encode: { scheme: "morgan", vocab: "data/vocabs/vocab_morgan.pickle" }
+  data: { label_normed: true, path: "data/pahdb/pahdb_w24146_neutral.csv" }
+  save: { model: "save/models/finetune/", log: "save/logs/finetune/" }
+  project: { name: "task1_morgan_neutral" }
+
+
+# ===============================================================
+# 2. Experiment Matrix
+# ===============================================================
+experiments:
+  # --- Config 1: Morgan-Neutral-Low-APE ---
+  - { trained: true, run_id: exp_morgan_neutral_low_ape, rope: false, bs: 16,
+      bert_weight: "save/models/pretrain/bert_exp_morgan_ds6_ape.pth", label_col: "norm_inten_low",
+      early_stop: { patience: 30, delta: 0.003 },
+      scheduler: { factor: 0.7, patience: 20, threshold: 0.003 }
+  }
+
+  # --- Config 2: Morgan-Neutral-Low-RoPE ---
+  - { trained: true, run_id: exp_morgan_neutral_low_rope, rope: true, bs: 16,
+      bert_weight: "save/models/pretrain/bert_exp_morgan_ds6_rope.pth", label_col: "norm_inten_low",
+      early_stop: { patience: 25, delta: 0.002 },
+      scheduler: { factor: 0.6, patience: 12, threshold: 0.002 }
+  }
+
+  # --- Config 3: Morgan-Neutral-High-APE ---
+  - { trained: true, run_id: exp_morgan_neutral_high_ape, rope: false, bs: 16,
+      bert_weight: "save/models/pretrain/bert_exp_morgan_ds6_ape.pth", label_col: "norm_inten_high",
+      early_stop: { patience: 30, delta: 0.002 },
+      scheduler: { factor: 0.7, patience: 18, threshold: 0.001 }
+  }
+
+  # --- Config 4: Morgan-Neutral-High-RoPE ---
+  - { trained: true, run_id: exp_morgan_neutral_high_rope, rope: true, bs: 16,
+      bert_weight: "save/models/pretrain/bert_exp_morgan_ds6_rope.pth", label_col: "norm_inten_high",
+      early_stop: { patience: 30, delta: 0.0005 },
+      scheduler: { factor: 0.6, patience: 20, threshold: 0.0005 }
+  }

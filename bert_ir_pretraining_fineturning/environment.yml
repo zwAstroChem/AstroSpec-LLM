@@ -1,0 +1,21 @@
+name: pah_bert_pt210_smiles
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10.19
+  - pip
+  - datasets=4.4.1
+  - matplotlib
+  - numpy
+  - pandas
+  - rdkit
+  - scikit-learn
+  - seaborn
+  - tqdm
+  - transformers
+  - pip:
+      - jupyterlab
+      - ipywidgets
+      - torch==2.10.0
+      - swanlab

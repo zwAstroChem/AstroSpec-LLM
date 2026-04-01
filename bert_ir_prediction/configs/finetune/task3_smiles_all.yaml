@@ -1,0 +1,29 @@
+# ===============================================================
+# 1. Global environment
+# ===============================================================
+base_settings: &defaults
+  model: { n_layer: 6, n_head: 12, hid_dim: 768, seq_len: 384, dropout: 0.3 }
+  optimizer: { lr: 0.000005 }
+  encode: { scheme: "smiles", vocab: "data/vocabs/vocab_smiles.pickle" }
+  data: { label_normed: true, path: "data/pahdb/pahdb_w24146_all.csv" }
+  save: { model: "save/models/finetune/", log: "save/logs/finetune/" }
+  project: { name: "task3_smiles_all" }
+
+
+# ===============================================================
+# 2. Experiment Matrix
+# ===============================================================
+experiments:
+  # --- Config 1: Smiles-All-RoPE-Low ---
+  - { trained: true, run_id: exp_smiles_all_rope_low, rope: true, bs: 32,
+      bert_weight: "save/models/pretrain/bert_exp_smiles_ds6_rope.pth", label_col: "norm_inten_low",
+      early_stop: { patience: 40, delta: 0.0001 },
+      scheduler: { factor: 0.5, patience: 25, threshold: 0.0001 }
+  }
+
+  # --- Config 2: Smiles-All-RoPE-High ---
+  - { trained: true, run_id: exp_smiles_all_rope_high, rope: true, bs: 32,
+      bert_weight: "save/models/pretrain/bert_exp_smiles_ds6_rope.pth", label_col: "norm_inten_high",
+      early_stop: { patience: 40, delta: 0.0001 },
+      scheduler: { factor: 0.5, patience: 25, threshold: 0.0001 }
+  }

@@ -1,0 +1,37 @@
+# ===============================================================
+# 1. Global environment
+# ===============================================================
+base_settings: &defaults
+  model: { n_layer: 6, n_head: 12, hid_dim: 768, seq_len: 384, dropout: 0.1 }
+  optimizer: { lr: 0.0001 }
+  encode: { scheme: "morgan", vocab: "data/vocabs/vocab_smiles.pickle" }
+  project: { name: "pretrain_bert_with_smiles", seed: 42 }
+
+
+# ===============================================================
+# 2. Experiment Matrix
+# ===============================================================
+experiments:
+#  # --- DATASET 1: Wang Raw 1M ---
+#  - { trained: true, run_id: exp_smiles_ds1_ape,  rope: false, epochs: 8, bs: 32,  ds_id: ds1, data_path: "data/corpus/Wang_raw_1M.csv" }
+#  - { trained: true, run_id: exp_smiles_ds1_rope, rope: true,  epochs: 8, bs: 32,  ds_id: ds1, data_path: "data/corpus/Wang_raw_1M.csv" }
+#
+#  # --- DATASET 2: Wang LikePAHs (118k) ---
+#  - { trained: true, run_id: exp_smiles_ds2_ape,  rope: false, epochs: 90, bs: 64, ds_id: ds2, data_path: "data/corpus/Wang_likePAHs_from_Raw_118770.csv" }
+#  - { trained: true, run_id: exp_smiles_ds2_rope, rope: true,  epochs: 90, bs: 64, ds_id: ds2, data_path: "data/corpus/Wang_likePAHs_from_Raw_118770.csv" }
+#
+#  # --- DATASET 3: ZINC20 Raw 1M ---
+#  - { trained: true, run_id: exp_smiles_ds3_ape,  rope: false, epochs: 50, bs: 64, ds_id: ds3, data_path: "data/corpus/ZINC20_raw_1M.csv" }
+#  - { trained: true, run_id: exp_smiles_ds3_rope, rope: true,  epochs: 50, bs: 64, ds_id: ds3, data_path: "data/corpus/ZINC20_raw_1M.csv" }
+#
+#  # --- DATASET 4: ZINC20 LikePAHs (from Raw) ---
+#  - { trained: true, run_id: exp_smiles_ds4_ape,  rope: false, epochs: 20, bs: 64, ds_id: ds4, data_path: "data/corpus/ZINC20_likePAHs_from_Raw_1M.csv" }
+#  - { trained: true, run_id: exp_smiles_ds4_rope, rope: true,  epochs: 20, bs: 64, ds_id: ds4, data_path: "data/corpus/ZINC20_likePAHs_from_Raw_1M.csv" }
+#
+#  # --- DATASET 5: ZINC20 Selected 1M ---
+#  - { trained: true, run_id: exp_smiles_ds5_ape,  rope: false, epochs: 50, bs: 64, ds_id: ds5, data_path: "data/corpus/ZINC20_selected_1M.csv" }
+#  - { trained: true, run_id: exp_smiles_ds5_rope, rope: true,  epochs: 50, bs: 64, ds_id: ds5, data_path: "data/corpus/ZINC20_selected_1M.csv" }
+
+  # --- DATASET 6: ZINC20 LikePAHs (from Selected) ---
+  - { trained: true, run_id: exp_smiles_ds6_ape,  rope: false, epochs: 30, bs: 64, ds_id: ds6, data_path: "data/corpus/ZINC20_likePAHs_from_Selected_1M.csv" }
+  - { trained: true, run_id: exp_smiles_ds6_rope, rope: true,  epochs: 30, bs: 64, ds_id: ds6, data_path: "data/corpus/ZINC20_likePAHs_from_Selected_1M.csv" }

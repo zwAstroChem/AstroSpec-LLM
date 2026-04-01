@@ -1,0 +1,24 @@
+# ===============================================================
+# 1. Global environment
+# ===============================================================
+base_settings: &defaults
+  model: { n_layer: 6, n_head: 12, hid_dim: 768, seq_len: 384, dropout: 0.0 }
+  optimizer: { lr: 0.00005 }
+  encode: { scheme: "smiles", vocab: "data/vocabs/vocab_smiles.pickle" }
+  data: { label_normed: true, path: "data/pahdb/pahdb_w24146_all.csv", kfold: 10 }
+  save: { model: "save/models/finetune/", log: "save/logs/finetune/" }
+  project: { name: "task7_smiles_all_charge_kfold" }
+  charge: { vocab: [ -1, 0, 1, 2 ] }
+
+
+# ===============================================================
+# 2. Experiment Matrix
+# ===============================================================
+experiments:
+  # --- Config: Smiles-All-RoPE-Charge-Low-Emb-KFold ---
+  - { trained: false, run_id: exp_smiles_all_rope_charge_low_emb, rope: true, bs: 16,
+      bert_weight: "save/models/pretrain/bert_exp_smiles_ds6_rope.pth", label_col: "norm_inten_low",
+      early_stop: { patience: 50, delta: 0.001 },
+      scheduler: { factor: 0.5, patience: 20, threshold: 0.001 },
+      charge: { enc: "emb", emb_dim: [ 56 ] }
+  }

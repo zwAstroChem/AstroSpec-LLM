@@ -1,0 +1,48 @@
+# ===============================================================
+# 1. Global environment
+# ===============================================================
+base_settings: &defaults
+  model: { n_layer: 6, n_head: 12, hid_dim: 768, seq_len: 384, dropout: 0.0 }
+  optimizer: { lr: 0.00005 }
+  encode: { scheme: "smiles", vocab: "data/vocabs/vocab_smiles.pickle" }
+  data: { label_normed: true, path: "data/pahdb/pahdb_w24146_all.csv" }
+  save: { model: "save/models/finetune/", log: "save/logs/finetune/" }
+  project: { name: "task4_smiles_all_charge" }
+  charge: { vocab: [ -1, 0, 1, 2 ] }
+
+
+# ===============================================================
+# 2. Experiment Matrix
+# ===============================================================
+experiments:
+  # --- Config 1: Smiles-All-RoPE-Charge-Low-Onehot ---
+  - { trained: false, run_id: exp_smiles_all_rope_charge_low_onehot, rope: true, bs: 16,
+      bert_weight: "save/models/pretrain/bert_exp_smiles_ds6_rope.pth", label_col: "norm_inten_low",
+      early_stop: { patience: 30, delta: 0.002 },
+      scheduler: { factor: 0.5, patience: 10, threshold: 0.001 },
+      charge: { enc: "onehot", onehot_repeat: [ 9 ] }
+  }
+
+  # --- Config 2: Smiles-All-RoPE-Charge-Low-Emb ---
+  - { trained: true, run_id: exp_smiles_all_rope_charge_low_emb, rope: true, bs: 16,
+      bert_weight: "save/models/pretrain/bert_exp_smiles_ds6_rope.pth", label_col: "norm_inten_low",
+      early_stop: { patience: 30, delta: 0.002 },
+      scheduler: { factor: 0.5, patience: 10, threshold: 0.001 },
+      charge: { enc: "emb", emb_dim: [ 56 ] }
+  }
+
+  # --- Config 3: Smiles-All-RoPE-Charge-High-Onehot ---
+  - { trained: false, run_id: exp_smiles_all_rope_charge_high_onehot, rope: true, bs: 16,
+      bert_weight: "save/models/pretrain/bert_exp_smiles_ds6_rope.pth", label_col: "norm_inten_high",
+      early_stop: { patience: 30, delta: 0.002 },
+      scheduler: { factor: 0.5, patience: 10, threshold: 0.001 },
+      charge: { enc: "onehot", onehot_repeat: [ 9 ] }
+  }
+
+  # --- Config 4: Smiles-All-RoPE-Charge-High-Emb ---
+  - { trained: true, run_id: exp_smiles_all_rope_charge_high_emb, rope: true, bs: 16,
+      bert_weight: "save/models/pretrain/bert_exp_smiles_ds6_rope.pth", label_col: "norm_inten_high",
+      early_stop: { patience: 30, delta: 0.002 },
+      scheduler: { factor: 0.5, patience: 10, threshold: 0.001 },
+      charge: { enc: "emb", emb_dim: [ 56 ] }
+  }
