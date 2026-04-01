@@ -1,1 +1,7 @@
-Large files
+download the large data files on https://github.com/zwAstroChem/AstroSpec-LLM/releases/tag/V1.0.0
+and place:
+Model Parameters for Prediction
+Both files below should be placed in: ./bert_ir_prediction/save/models/finetune/task4_smiles_all_charge/
+File 1: BERT4IR_ft_can_all_charge_useRoPE_high_onehot(4x9)_best.pth
+File 2: BERT4IR_ft_can_all_charge_useRoPE_low_onehot(4x9)_best.pth
+Purpose: Fine-tuned parameters optimized for high and low task variants during the inference/prediction stage.
